@@ -1,4 +1,4 @@
-# linux-networking
+# Linux Networking
 Basics in Linux and Networking
 
 ## 🧠 Linux Networking Challenge Roadmap (Weeks 1–6)

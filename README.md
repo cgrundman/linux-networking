@@ -69,7 +69,7 @@ Create a cheat sheet markdown file with:
 | 3	| List routing table | `ip route` | Understand how your system knows where to send traffic |
 | 4	| Get your public IP address | `curl ifconfig.me` |	See how your system appears on the internet |
 | 5	| Download a webpage manually | `curl https://example.com` or `wget https://example.com` | Practice using network tools to test HTTP requests |
-| 6	| Save a webpage to a file | `wget https://example.com -O example.html`	| Explore basic file transfer over HTTP |
+| 6	| Save a webpage to a file | `wget https://example.com -o example.html`	| Explore basic file transfer over HTTP |
 | 7	| Scan for a known port	| `ss -ltn sport = :22` | See if a specific port (e.g. SSH) is open and listening |
 
 ---

@@ -1,0 +1,8 @@
+# Week 3 Notes
+
+## Difference between dig, nslookup, and resolvects the Difference between dig, nslookup, and resolvectl. 
+Dig is a command that returns the conection between the local start point (your computer) 
+and the requested endpoint, as well connect times. It also contains high level 
+information about the connection bet
+
+On this system, DNS resolution works by consulting the DNS servers configured in `/etc/resolv.conf` (or through `systemd-resolved` if it’s in use). When you try to reach a domain name, your system sends a query to one of these DNS servers to get the corresponding IP address.

@@ -8,7 +8,7 @@ Basics in Linux and Networking
 | 1 | [Linux Networking Basics](#-week-1-linux-networking-basics) | `ip a`, `ip r`, `ping`, `hostname`, `whoami`, `/etc/hosts`, `/etc/resolv.conf` | Understand IP setup, DNS basics, hostname resolution | 🔹 Run `ip a` and explain your IP<br>🔹 Ping Google and your gateway<br>🔹 Edit `/etc/hosts` to add a fake domain |
 | 2 | [Connectivity & Routing](#-week-2-connectivity--routing) | `traceroute`, `ss`, `netstat`, `ip route`, `curl`, `wget` | Understand routing, active connections, ports | 🔹 Trace route to Google<br>🔹 View open ports with `ss -tuln`<br>🔹 Get public IP with `curl ifconfig.me` |
 | 3 | [DNS & Name Resolution](#-week-3-dns--name-resolution) | `dig`, `nslookup`, `resolvectl` | Learn DNS lookup and troubleshooting | 🔹 Use `dig` to resolve a domain<br>🔹 Change DNS server temporarily<br>🔹 Break/fix DNS via `/etc/resolv.conf` |
-| 4 | SSH & File Transfers | `ssh`, `scp`, `rsync`, `sshd`, `.ssh/config` | Remote access and secure file transfer | 🔹 Connect to another machine via SSH<br>🔹 Copy file with `scp`<br>🔹 Create an SSH alias in `.ssh/config` |
+| 4 | [SSH & File Transfers](#-week-4-ssh--file-transfers) | `ssh`, `scp`, `rsync`, `sshd`, `.ssh/config` | Remote access and secure file transfer | 🔹 Connect to another machine via SSH<br>🔹 Copy file with `scp`<br>🔹 Create an SSH alias in `.ssh/config` |
 | 5 | Firewalls & Security | `ufw`, `iptables`, `fail2ban` *(optional)* | Configure basic firewall rules | 🔹 Enable `ufw` and allow SSH<br>🔹 Block non-essential ports<br>🔹 Test firewall rule functionality |
 | 6 | Scanning & Traffic Monitoring | `nmap`, `tcpdump`, `iftop`, `nethogs` | Scan networks, monitor traffic & bandwidth | 🔹 Scan your LAN with `nmap`<br>🔹 Capture packets with `tcpdump`<br>🔹 Monitor usage with `iftop` or `nethogs` |
 
@@ -110,3 +110,30 @@ Write a brief report explaining:
  - The differences between `dig`, `nslookup`, and `resolvectl`
  - How DNS resolution works on your system
  - Any troubleshooting steps you took and how they fixed the DNS issues
+
+## 📅 Week 4: SSH & File Transfers
+**Goal:** Learn to connect to remote systems securely, transfer files, and streamline your workflow with SSH configuration.
+
+### 🔧 Tools You'll Use:
+ - `ssh`
+ - `scp`
+ - `rsync`
+ - `sshd`
+ - `~/.ssh/config`
+
+### ✅ Tasks & Challenges
+| # | Task | Command or Action | What You’re Learning |
+|---|------|-------------------|----------------------|
+| 1 | Test local SSH server (optional if available) | `ssh localhost` or `ssh user@your-ip` | Verify that SSH is installed and working locally |
+| 2 | Connect to a remote machine | `ssh user@remote-ip` | Learn to access another system via SSH (can be a Raspberry Pi, virtual machine, or test server) |
+| 3 | Copy a file to remote machine using `scp` | `scp myfile.txt user@remote-ip:/home/user/` | Practice secure file transfer |
+| 4 | Copy from remote to local | `scp user@remote-ip:/home/user/notes.txt ./` | Download files from a remote system |
+| 5 | Use rsync for syncing files | `rsync -av myfolder/ user@remote-ip:/home/user/myfolder/` | Efficiently sync folders with resume and delta support |
+| 6 | Add an SSH alias in `~/.ssh/config` | Add a block like: `Host myserver/HostName 192.168.1.10/User alice` | Connect using ssh myserver instead of the full command |
+| 7 | Use the alias for `scp` or `ssh` | `scp file.txt myserver:/tmp/` | Confirm your alias works for all SSH-based tools |
+| 8 | Restart or verify `sshd` (if self-hosting) | `sudo systemctl status ssh` or `sudo systemctl restart ssh` | Ensure your machine is accepting SSH connections (skip if not hosting) |
+
+---
+
+### 💡 Bonus Mini-Project:
+Create a simple script to sync a folder of notes between two machines using `rsync` and your `.ssh/config` alias.

@@ -50,9 +50,12 @@ Create a cheat sheet markdown file with:
 - Default gateway
 - Notes on what each command does
 
+---
 
 ## 📅 Week 2: Connectivity & Routing
 **Goal:** Understand how your computer reaches other networks, what connections it’s making, and how to explore them.
+
+---
 
 ### 🔧 Tools You'll Use:
 - `traceroute`
@@ -60,6 +63,8 @@ Create a cheat sheet markdown file with:
 - `ip route`
 - `curl`
 - `wget`
+
+---
 
 ### ✅ Tasks & Challenges
 
@@ -81,14 +86,20 @@ Create a markdown report:
 - Output samples from your system (anonymized if needed)
 - Questions you had or things you want to explore further
 
+---
+
 ## 📅 Week 3: DNS & Name Resolution
 **Goal:** Learn how your system looks up domain names, troubleshoot DNS issues, and manipulate DNS settings.
+
+---
 
 ### 🔧 Tools You'll Use:
  - `dig`
  - `nslookup`
  - `resolvectl`
  - `/etc/resolv.conf`
+
+---
 
 ### ✅ Tasks & Challenges
 
@@ -111,8 +122,12 @@ Write a brief report explaining:
  - How DNS resolution works on your system
  - Any troubleshooting steps you took and how they fixed the DNS issues
 
+---
+
 ## 📅 Week 4: SSH & File Transfers
 **Goal:** Learn to connect to remote systems securely, transfer files, and streamline your workflow with SSH configuration.
+
+---
 
 ### 🔧 Tools You'll Use:
  - `ssh`
@@ -120,6 +135,8 @@ Write a brief report explaining:
  - `rsync`
  - `sshd`
  - `~/.ssh/config`
+
+---
 
 ### ✅ Tasks & Challenges
 | # | Task | Command or Action | What You’re Learning |
@@ -137,3 +154,38 @@ Write a brief report explaining:
 
 ### 💡 Bonus Mini-Project:
 Create a simple script to sync a folder of notes between two machines using `rsync` and your `.ssh/config` alias.
+
+---
+
+## 📅 Week 5: Firewalls & Security
+**Goal:** Learn how to control incoming/outgoing traffic on your system, manage firewall rules, and understand basic network-level security.
+
+---
+
+### 🔧 Tools You’ll Use:
+ - `ufw` (Uncomplicated Firewall)
+ - `iptables` (optional, advanced)
+ - `nmap` (for scanning open ports)
+ - `netcat` (nc, for basic listening/connections)
+
+---
+
+### ✅ Tasks & Concepts
+| # | Task | Command or Action | What You’re Learning |
+|---|------|-------------------|----------------------|
+| 1 | Check firewall status	| `sudo ufw status`	| See if a firewall is running and what it allows/blocks |
+| 2	| Enable the firewall	| `sudo ufw enable`	| Turn on basic firewall protection |
+| 3	| Allow SSH through firewall	| `sudo ufw allow ssh`	| Keep remote access open while firewall is on |
+| 4	| Block a port (e.g., 8080)	| `sudo ufw deny 8080`	| Understand how to restrict unwanted services |
+| 5	| Check open ports with `nmap`	| `nmap localhost`	| Learn how to scan your system from a network perspective |
+| 6	| Open a test port using `netcat`	| `nc -l 8888`	| Simulate a service listening on a port |
+| 7	| Block and unblock that test port	| Use `ufw deny 8888`, test with `nmap`, then `ufw delete deny 8888`	| Practice verifying and managing rules |
+| 8	| View raw firewall rules (optional)	| `sudo iptables -L`	| See the underlying system firewall configuration |
+
+---
+
+### 💡 Bonus Mini-Project:
+**"Lockdown and Access Test":** Set up a local service (like Python HTTP server or netcat), scan it with nmap, then block it with UFW. Write a short log of the steps and what you observed.
+
+---
+

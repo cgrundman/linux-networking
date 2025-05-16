@@ -1,20 +1,20 @@
 # Linux Networking
 Basics in Linux and Networking
 
-## 🧠 Linux Networking Challenge Roadmap (Weeks 1–6)
+## 🧠 Linux Networking Challenge Roadmap (Parts 1–6)
 
-| **Week** | **Focus Area** | **Tools/Commands** | **Goals** | **Challenges** |
+| **Part** | **Focus Area** | **Tools/Commands** | **Goals** | **Challenges** |
 |----------|----------------|--------------------|-----------|----------------|
-| 1 | [Linux Networking Basics](#-week-1-linux-networking-basics) | `ip a`, `ip r`, `ping`, `hostname`, `whoami`, `/etc/hosts`, `/etc/resolv.conf` | Understand IP setup, DNS basics, hostname resolution | 🔹 Run `ip a` and explain your IP<br>🔹 Ping Google and your gateway<br>🔹 Edit `/etc/hosts` to add a fake domain |
-| 2 | [Connectivity & Routing](#-week-2-connectivity--routing) | `traceroute`, `ss`, `netstat`, `ip route`, `curl`, `wget` | Understand routing, active connections, ports | 🔹 Trace route to Google<br>🔹 View open ports with `ss -tuln`<br>🔹 Get public IP with `curl ifconfig.me` |
-| 3 | [DNS & Name Resolution](#-week-3-dns--name-resolution) | `dig`, `nslookup`, `resolvectl` | Learn DNS lookup and troubleshooting | 🔹 Use `dig` to resolve a domain<br>🔹 Change DNS server temporarily<br>🔹 Break/fix DNS via `/etc/resolv.conf` |
-| 4 | [SSH & File Transfers](#-week-4-ssh--file-transfers) | `ssh`, `scp`, `rsync`, `sshd`, `.ssh/config` | Remote access and secure file transfer | 🔹 Connect to another machine via SSH<br>🔹 Copy file with `scp`<br>🔹 Create an SSH alias in `.ssh/config` |
-| 5 | [Firewalls & Security](#-week-5-firewalls--security) | `ufw`, `iptables`, `fail2ban` *(optional)* | Configure basic firewall rules | 🔹 Enable `ufw` and allow SSH<br>🔹 Block non-essential ports<br>🔹 Test firewall rule functionality |
-| 6 | Scanning & Traffic Monitoring | `nmap`, `tcpdump`, `iftop`, `nethogs` | Scan networks, monitor traffic & bandwidth | 🔹 Scan your LAN with `nmap`<br>🔹 Capture packets with `tcpdump`<br>🔹 Monitor usage with `iftop` or `nethogs` |
+| 1 | [Linux Networking Basics](#-part-1-linux-networking-basics) | `ip a`, `ip r`, `ping`, `hostname`, `whoami`, `/etc/hosts`, `/etc/resolv.conf` | Understand IP setup, DNS basics, hostname resolution | 🔹 Run `ip a` and explain your IP<br>🔹 Ping Google and your gateway<br>🔹 Edit `/etc/hosts` to add a fake domain |
+| 2 | [Connectivity & Routing](#-part-2-connectivity--routing) | `traceroute`, `ss`, `netstat`, `ip route`, `curl`, `wget` | Understand routing, active connections, ports | 🔹 Trace route to Google<br>🔹 View open ports with `ss -tuln`<br>🔹 Get public IP with `curl ifconfig.me` |
+| 3 | [DNS & Name Resolution](#-part-3-dns--name-resolution) | `dig`, `nslookup`, `resolvectl` | Learn DNS lookup and troubleshooting | 🔹 Use `dig` to resolve a domain<br>🔹 Change DNS server temporarily<br>🔹 Break/fix DNS via `/etc/resolv.conf` |
+| 4 | [SSH & File Transfers](#-part-4-ssh--file-transfers) | `ssh`, `scp`, `rsync`, `sshd`, `.ssh/config` | Remote access and secure file transfer | 🔹 Connect to another machine via SSH<br>🔹 Copy file with `scp`<br>🔹 Create an SSH alias in `.ssh/config` |
+| 5 | [Firewalls & Security](#-part-5-firewalls--security) | `ufw`, `iptables`, `fail2ban` *(optional)* | Configure basic firewall rules | 🔹 Enable `ufw` and allow SSH<br>🔹 Block non-essential ports<br>🔹 Test firewall rule functionality |
+| 6 | [Scanning & Traffic Monitoring](#-part-6-network-monitoring--diagnostics) | `nmap`, `tcpdump`, `iftop`, `nethogs` | Scan networks, monitor traffic & bandwidth | 🔹 Scan your LAN with `nmap`<br>🔹 Capture packets with `tcpdump`<br>🔹 Monitor usage with `iftop` or `nethogs` |
 
 
 
-## 📅 Week 1: Linux Networking Basics  
+## 📅 Part 1: Linux Networking Basics  
 **Goal:** Understand how your computer connects to a network and resolves names (like websites).
 
 ---
@@ -52,7 +52,7 @@ Create a cheat sheet markdown file with:
 
 ---
 
-## 📅 Week 2: Connectivity & Routing
+## 📅 Part 2: Connectivity & Routing
 **Goal:** Understand how your computer reaches other networks, what connections it’s making, and how to explore them.
 
 ---
@@ -88,7 +88,7 @@ Create a markdown report:
 
 ---
 
-## 📅 Week 3: DNS & Name Resolution
+## 📅 Part 3: DNS & Name Resolution
 **Goal:** Learn how your system looks up domain names, troubleshoot DNS issues, and manipulate DNS settings.
 
 ---
@@ -124,7 +124,7 @@ Write a brief report explaining:
 
 ---
 
-## 📅 Week 4: SSH & File Transfers
+## 📅 Part 4: SSH & File Transfers
 **Goal:** Learn to connect to remote systems securely, transfer files, and streamline your workflow with SSH configuration.
 
 ---
@@ -157,7 +157,7 @@ Create a simple script to sync a folder of notes between two machines using `rsy
 
 ---
 
-## 📅 Week 5: Firewalls & Security
+## 📅 Part 5: Firewalls & Security
 **Goal:** Learn how to control incoming/outgoing traffic on your system, manage firewall rules, and understand basic network-level security.
 
 ---
@@ -189,7 +189,7 @@ Create a simple script to sync a folder of notes between two machines using `rsy
 
 ---
 
-## 📅 Week 6: Network Monitoring & Diagnostics
+## 📅 Part 6: Network Monitoring & Diagnostics
 **Goal:** Learn to inspect network traffic, monitor usage, and diagnose issues with real-time and historical tools.
 
 ---

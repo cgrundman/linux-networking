@@ -7,7 +7,7 @@ Basics in Linux and Networking
 |----------|----------------|--------------------|-----------|----------------|
 | 1 | [Linux Networking Basics](./part1/part1.md) | `ip a`, `ip r`, `ping`, `hostname`, `whoami`, `/etc/hosts`, `/etc/resolv.conf` | Understand IP setup, DNS basics, hostname resolution | 🔹 Run `ip a` and explain your IP<br>🔹 Ping Google and your gateway<br>🔹 Edit `/etc/hosts` to add a fake domain |
 | 2 | [Connectivity & Routing](./part2/part2.md) | `traceroute`, `ss`, `netstat`, `ip route`, `curl`, `wget` | Understand routing, active connections, ports | 🔹 Trace route to Google<br>🔹 View open ports with `ss -tuln`<br>🔹 Get public IP with `curl ifconfig.me` |
-| 3 | [DNS & Name Resolution](#-part-3-dns--name-resolution) | `dig`, `nslookup`, `resolvectl` | Learn DNS lookup and troubleshooting | 🔹 Use `dig` to resolve a domain<br>🔹 Change DNS server temporarily<br>🔹 Break/fix DNS via `/etc/resolv.conf` |
+| 3 | [DNS & Name Resolution](./part3/part3.md) | `dig`, `nslookup`, `resolvectl` | Learn DNS lookup and troubleshooting | 🔹 Use `dig` to resolve a domain<br>🔹 Change DNS server temporarily<br>🔹 Break/fix DNS via `/etc/resolv.conf` |
 | 4 | [SSH & File Transfers](#-part-4-ssh--file-transfers) | `ssh`, `scp`, `rsync`, `sshd`, `.ssh/config` | Remote access and secure file transfer | 🔹 Connect to another machine via SSH<br>🔹 Copy file with `scp`<br>🔹 Create an SSH alias in `.ssh/config` |
 | 5 | [Firewalls & Security](#-part-5-firewalls--security) | `ufw`, `iptables`, `fail2ban` *(optional)* | Configure basic firewall rules | 🔹 Enable `ufw` and allow SSH<br>🔹 Block non-essential ports<br>🔹 Test firewall rule functionality |
 | 6 | [Scanning & Traffic Monitoring](#-part-6-network-monitoring--diagnostics) | `nmap`, `tcpdump`, `iftop`, `nethogs` | Scan networks, monitor traffic & bandwidth | 🔹 Scan your LAN with `nmap`<br>🔹 Capture packets with `tcpdump`<br>🔹 Monitor usage with `iftop` or `nethogs` |
@@ -18,39 +18,7 @@ Basics in Linux and Networking
 
 ---
 
-## 📅 Part 3: DNS & Name Resolution
-**Goal:** Learn how your system looks up domain names, troubleshoot DNS issues, and manipulate DNS settings.
 
----
-
-### 🔧 Tools You'll Use:
- - `dig`
- - `nslookup`
- - `resolvectl`
- - `/etc/resolv.conf`
-
----
-
-### ✅ Tasks & Challenges
-
-| # | Task | Command or Action | What You’re Learning |
-|---|------|-------------------|----------------------|
-| 1 | Resolve a domain with `dig` | `dig google.com` | See how dig works and what information it returns (e.g., IP, DNS server) |
-| 2 | Check DNS records with `nslookup` | `nslookup google.com` | Use nslookup to get A records (IPv4) or other records (e.g., MX for mail) |
-| 3 | View current DNS settings with `resolvectl` | `resolvectl status` | See which DNS servers your system is using |
-| 4 | Change DNS server temporarily | `sudo resolvectl dns eth0 8.8.8.8` | Learn how to change your DNS server temporarily for a network interface (eth0 in this case) |
-| 5 | Check DNS resolution with `dig` after changing servers | `dig google.com` | Verify that DNS resolution uses the new DNS server |
-| 6 | Inspect `/etc/resolv.conf` | `cat /etc/resolv.conf` | Look at your DNS configuration file and understand how it works |
-| 7 | Temporarily break DNS | Edit `/etc/resolv.conf` and comment out nameserver lines | See what happens when DNS is broken (try ping google.com or dig google.com) |
-| 8 | Fix DNS by restoring `/etc/resolv.conf` | Re-add a valid DNS server to `/etc/resolv.conf` | Learn how to restore DNS functionality by editing the config file |
-
----
-
-### 💡 Bonus Mini-Project:
-Write a brief report explaining:
- - The differences between `dig`, `nslookup`, and `resolvectl`
- - How DNS resolution works on your system
- - Any troubleshooting steps you took and how they fixed the DNS issues
 
 ---
 

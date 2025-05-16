@@ -173,14 +173,14 @@ Create a simple script to sync a folder of notes between two machines using `rsy
 ### ✅ Tasks & Concepts
 | # | Task | Command or Action | What You’re Learning |
 |---|------|-------------------|----------------------|
-| 1 | Check firewall status	| `sudo ufw status`	| See if a firewall is running and what it allows/blocks |
-| 2	| Enable the firewall	| `sudo ufw enable`	| Turn on basic firewall protection |
-| 3	| Allow SSH through firewall	| `sudo ufw allow ssh`	| Keep remote access open while firewall is on |
-| 4	| Block a port (e.g., 8080)	| `sudo ufw deny 8080`	| Understand how to restrict unwanted services |
-| 5	| Check open ports with `nmap`	| `nmap localhost`	| Learn how to scan your system from a network perspective |
-| 6	| Open a test port using `netcat`	| `nc -l 8888`	| Simulate a service listening on a port |
-| 7	| Block and unblock that test port	| Use `ufw deny 8888`, test with `nmap`, then `ufw delete deny 8888`	| Practice verifying and managing rules |
-| 8	| View raw firewall rules (optional)	| `sudo iptables -L`	| See the underlying system firewall configuration |
+| 1 | Check firewall status	 | `sudo ufw status`	| See if a firewall is running and what it allows/blocks |
+| 2	| Enable the firewall | `sudo ufw enable`	| Turn on basic firewall protection |
+| 3	| Allow SSH through firewall | `sudo ufw allow ssh`	| Keep remote access open while firewall is on |
+| 4	| Block a port (e.g., 8080) | `sudo ufw deny 8080`	| Understand how to restrict unwanted services |
+| 5	| Check open ports with `nmap` | `nmap localhost`	| Learn how to scan your system from a network perspective |
+| 6	| Open a test port using `netcat` | `nc -l 8888`	| Simulate a service listening on a port |
+| 7	| Block and unblock that test port | Use `ufw deny 8888`, test with `nmap`, then `ufw delete deny 8888`	| Practice verifying and managing rules |
+| 8	| View raw firewall rules (optional) | `sudo iptables -L`	| See the underlying system firewall configuration |
 
 ---
 
@@ -189,3 +189,39 @@ Create a simple script to sync a folder of notes between two machines using `rsy
 
 ---
 
+## 📅 Week 6: Network Monitoring & Diagnostics
+**Goal:** Learn to inspect network traffic, monitor usage, and diagnose issues with real-time and historical tools.
+
+---
+
+### 🔧 Tools You’ll Use:
+ - `iftop` or `nethogs`
+ - `tcpdump`
+ - `netstat` / `ss`
+ - `ip`
+ - `journalctl` / `dmesg`
+
+---
+
+### ✅ Tasks & Concepts
+| # | Task | Command or Action | What You’re Learning |
+|---|------|-------------------|----------------------|
+| 1 | Monitor bandwidth per connection | `sudo iftop` or `sudo nethogs` | See which processes use your bandwidth |
+| 2 | View open ports and listening services | `ss -tuln` or `netstat -tuln` | Real-time info on what ports are being used |
+| 3 | Capture packets on an interface | `sudo tcpdump -i <interface>` | See actual packets being sent and received |
+| 4 | Capture and save packets to a file | `sudo tcpdump -i <interface> -w capture.pcap` | Store traffic to analyze later with Wireshark |
+| 5 | Inspect network interfaces and stats | `ip a and ip -s link` | View traffic and errors on each network device |
+| 6 | Read kernel logs for network errors | `dmesg` | grep ethorjournalctl -u NetworkManager` |
+| 7 | Filter tcpdump for a specific port or host | `sudo tcpdump port 22` or `host google.com` | Learn to target traffic of interest |
+| 8 | (Optional) Analyze .pcap with Wireshark | Open `capture.pcap` in Wireshark | Use a GUI to visually inspect traffic patterns |
+
+---
+
+### 💡 Bonus Mini-Project:
+**"What’s My Network Doing?":** 
+1. Run iftop or nethogs while browsing and downloading files.
+2. Capture packets using tcpdump during the activity.
+3. Analyze the .pcap file or summarize the activity:
+     - What IPs were contacted?
+     - What ports were used?
+     - What used the most bandwidth?

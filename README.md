@@ -11,3 +11,7 @@ Basics in Linux and Networking
 | 4 | [SSH & File Transfers](./part4/part4.md) | `ssh`, `scp`, `rsync`, `sshd`, `.ssh/config` | Remote access and secure file transfer | 🔹 Connect to another machine via SSH<br>🔹 Copy file with `scp`<br>🔹 Create an SSH alias in `.ssh/config` |
 | 5 | [Firewalls & Security](#-part-5-firewalls--security) | `ufw`, `iptables`, `fail2ban` *(optional)* | Configure basic firewall rules | 🔹 Enable `ufw` and allow SSH<br>🔹 Block non-essential ports<br>🔹 Test firewall rule functionality |
 | 6 | [Scanning & Traffic Monitoring](#-part-6-network-monitoring--diagnostics) | `nmap`, `tcpdump`, `iftop`, `nethogs` | Scan networks, monitor traffic & bandwidth | 🔹 Scan your LAN with `nmap`<br>🔹 Capture packets with `tcpdump`<br>🔹 Monitor usage with `iftop` or `nethogs` |
+
+## 💡 Captstone:
+**Network Monitoring Demo**: This bash file prints descriptions, runs the tools where appropriate, and includes pauses so you can see the output interactively. It won’t alter system settings, just display info safely.
+[Networking Monitoring Demonstration](network_monitoring_demo.sh)
